@@ -1,0 +1,105 @@
+/* 詳細画面のcss */
+
+
+img {
+    width: 100%;
+    height: auto;
+    height: 100%;
+}
+
+main {
+    background-color: #faeee7;
+    padding: 30px 4%;
+    min-height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+.container h2 {
+    font-size: 1.5rem;
+    border-bottom: 1px solid #000;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+.detail-shop {
+    /* background-color: pink; */
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+.detail-shop h3 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.detail-shop-text {
+    text-align: left;
+    margin-top: 20px;
+}
+.detail-shop-text div{
+    margin-bottom: 20px;
+}
+.shop-image img {
+    min-width: 350px;
+    border-radius: 10px;
+}
+.bold {
+    font-weight: bold;
+    padding-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.index-btn a {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: #ffc6c7;
+    display: inline-block;
+    padding: 4% 10%;
+    border-radius: 5px;
+    border: 3px solid #594a4e;
+}
+
+/*
+
+レスポンシブデザイン600px以下の画面
+
+*/
+@media ( min-width : 600px ){
+    .detail-shop h3 {
+        font-size: 1.6rem;
+        margin-bottom: 30px;
+        text-align: left;
+    }
+    .detail-shop {
+        font-size: 1.2rem;
+    }
+
+    .bold {
+        font-weight: bold;
+        padding-bottom: 5px;
+        font-size: 1.3rem;
+    }
+    .index-btn {
+
+        display: inline-block;
+        padding: 4% 10%;
+        border-radius: 5px;
+    }
+    .index-btn a {
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+
+}
+/*
+ レスポンシブデザイン900px以下の画面
+ */
+@media ( min-width : 850px ){
+
+    .detail-shop {
+        max-width: 700px;
+        margin: 60px auto ;
+    }
+}

@@ -1,0 +1,85 @@
+
+img {
+    width: 100%;
+    height: auto;
+    height: 100%;
+}
+
+main {
+    background-color: #faeee7;
+    padding: 30px 4%;
+}
+.bold {
+    font-weight: bold;
+    padding-bottom: 15px;
+    font-size: 1.1rem;
+
+}
+.container {
+    text-align: center;
+    min-height: 100vh;
+}
+.container h2 {
+    font-size: 1.5rem;
+    border-bottom: 1px solid #000;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+.shop-search-img {
+    margin-top: 30px;
+}
+
+.shop-search-form {
+    background-color: white;
+    margin-top: 50px;
+    text-align: left;
+    padding: 30px;
+}
+.shop-search-form01 {
+    /* background-color: aquamarine; */
+    margin-bottom: 60px;
+    padding: 30px;
+    /* border: 1px solid #000; */
+}
+.shop-search-form01 select {
+    border: 1px solid #000;
+    padding: 3px;
+    border-radius: 5px;
+}
+.shop-search-form01  input {
+    border: 1px solid #000;
+    padding: 10px;
+}
+.search-btn {
+    /* background-color: antiquewhite; */
+    text-align: center;
+}
+.search-btn input{
+    background-color: #ff8ba7;
+    display: inline-block;
+    padding: 4% 10%;
+    border-radius: 5px;margin:  0 auto ;
+    color: #33272a;
+}
+.search-btn a {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+
+/*
+ レスポンシブデザイン900px以下の画面
+ */
+@media ( min-width : 850px ){
+    .shop-search-img {
+        max-width: 750px;
+        margin: 30px auto 0px auto;
+    }
+
+    .shop-search-form {
+        padding: 30px;
+        max-width: 750px;
+        margin:  50px auto 0px auto;
+    }
+
+}

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\HotpepperController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,9 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-
-Route::get('/', 'HotpepperController@index');
+Route::get('/', [HotpepperController::class, 'index']);

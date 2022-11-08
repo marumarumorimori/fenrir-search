@@ -1,0 +1,149 @@
+/* 一覧画面のcss */
+
+img {
+    width: 100%;
+    height: auto;
+    height: 100%;
+}
+
+main {
+    background-color: #faeee7;
+    padding: 30px 4%;
+    min-height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+.container h2 {
+    font-size: 1.5rem;
+    border-bottom: 1px solid #000;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+.shop-container {
+    /* background-color: azure; */
+    margin: 30px 0;
+}
+.shop {
+    /* background-color: bisque; */
+    margin-bottom: 40px;
+}
+.shop:last-child {
+    margin-bottom: 0;
+}
+
+.shop-image img {
+    min-width: 350px;
+    border-radius: 10px;
+}
+.shop-name {
+    font-size: 1.3rem;
+    /* background-color: aqua; */
+    padding-top: 10px;
+
+}
+
+.shop-info {
+    /* background-color: rgb(187, 187, 255); */
+    text-align: left;
+    padding-bottom: 10px;
+    font-size: 0.9rem;
+    min-width: 350px;
+    margin: 0 auto 20px auto;
+}
+.detail-shop-btn-container {
+    text-align: left;
+    /* background-color: rgb(20, 20, 249); */
+    min-width: 350px;
+    margin: 0 auto;
+    max-width: 400px;
+
+}
+
+.detail-shop-btn {
+    font-size: 1.2rem;
+    background-color: #ffc6c7;
+    border: 3px solid #594a4e;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    color: #594a4e;
+
+}
+/*
+
+レスポンシブデザイン600px以下の画面
+
+*/
+@media ( min-width : 600px ){
+    .shop-image img {
+        max-width: 500px;
+    }
+    .shop-name {
+        font-size: 1.3rem;
+        padding-top: 20px;
+        padding-bottom: 15px;
+    }
+
+    .shop-info {
+        text-align: left;
+        padding-bottom: 10px;
+        font-size: 0.96rem;
+        line-height: 1.5rem;
+        max-width: 450px;
+
+    }
+    .detail-shop-btn-container {
+        min-width: 450px;
+    }
+}
+/*
+ レスポンシブデザイン900px以下の画面
+ */
+@media ( min-width : 850px ){
+    .shop-container {
+        background-color: azure;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    .shop {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+
+    .shop:last-child {
+        margin-bottom: 20px;
+    }
+
+
+    .shop-image img {
+        min-width: 400px;
+        border-radius: 10px;
+        margin-right: 10px;
+
+    }
+
+    .shop-name {
+        font-size: 1.3rem;
+        /* background-color: aqua; */
+        padding-top: 10px;
+
+    }
+
+    .shop-info {
+        /* background-color: rgb(187, 187, 255); */
+        text-align: left;
+        padding-bottom: 0px;
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+        max-width: 400px;
+    }
+    .detail-shop-btn-container {
+        max-width: 400px;
+    }
+
+
+}
