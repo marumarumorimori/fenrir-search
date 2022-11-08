@@ -14,4 +14,7 @@ use App\Http\Controllers\HotpepperController;
 */
 
 
-Route::get('/', [HotpepperController::class, 'index']);
+Route::get('/', [HotpepperController::class, 'index'])->name('index');
+Route::post('/search', [HotpepperController::class, 'search'])->name('search');
+Route::get('/list', [HotpepperController::class, 'list'])->name('list');
+Route::get('/show/{id}' , [HotpepperController::class, 'show'])->name('show');

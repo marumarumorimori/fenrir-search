@@ -5,7 +5,8 @@
                 <div class="shop-search-img">
                     <img src="img/shop.png" alt="">
                 </div>
-                <form class="shop-search-form" method="get">
+                <form class="shop-search-form" method="POST" action="{{route('search')}}">
+                    @csrf
                             <div class="shop-search-form01">
                                 <p class="bold">半径</p>
                                 <select name="range">
@@ -16,9 +17,12 @@
                                     <option value="5">3000m</option>
                                 </select>
                             </div>
+                            <input type="text" name="lat" id="lat">
+                            <input type="text" name="lng" id="lng">
                             <div class="search-btn">
                                 <input type="submit" value="検索する">
                             </div>
                 </form>
             </div>
+            <script src="{{ asset('/js/setLocation.js') }}"></script>
 @endsection
