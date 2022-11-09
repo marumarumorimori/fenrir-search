@@ -1,9 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
-use GuzzleHttp\Client; // ここを追記
+use GuzzleHttp\Client;
 
 class HotpepperController extends Controller
 {
@@ -46,12 +45,17 @@ class HotpepperController extends Controller
             ],
         ];
 
+        // $response = Http::get(self::REQUEST_URL,$options);
+
+
+
         // HTTPリクエストを送信
-        $response = $client->request($method, self::REQUEST_URL, $options);
+        $response = $client->request('GET',self::REQUEST_URL, $options);
 
         // 'format' => 'json'としたのでJSON形式でデータが返ってくるので、連想配列型のオブジェクトに変換
         $restaurants = json_decode($response->getBody(), true)['results'];
-
+        // $restaurants =$response->body();
+        // $body = $response->body();
         // index.blade.phpを表示する
         return view('list', compact('restaurants'));
     }

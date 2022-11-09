@@ -3,7 +3,6 @@
 @section('content')
             <div class="shop-search">
                 <div class="shop-search-img">
-                    <img src="img/shop.png" alt="">
                 </div>
                 <form class="shop-search-form" method="POST" action="{{route('search')}}">
                     @csrf
@@ -17,8 +16,8 @@
                                     <option value="5">3000m</option>
                                 </select>
                             </div>
-                            <input type="text" name="lat" id="lat">
-                            <input type="text" name="lng" id="lng">
+                            <input type="hidden" name="lat" id="lat">
+                            <input type="hidden" name="lng" id="lng">
                             <div class="search-btn">
                                 <input type="submit" value="検索する">
                             </div>

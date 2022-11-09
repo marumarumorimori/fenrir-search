@@ -18,9 +18,7 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="index-btn">
-                <a href="{{route('list')}}">店舗一覧へ戻る</a>
-            </div> -->
+
             <button type="button" onClick="history.back()">戻る</button>
 
 @endsection

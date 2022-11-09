@@ -2,6 +2,10 @@
 @section('title', '一覧')
 @section('content')
 <div class="shop-container">
+<?php var_dump($restaurants['results_returned']);
+var_dump($restaurants);
+?>
+
 
         @for ($i = 0; $i < $restaurants['results_returned']; $i++):
             <div class="shop">
