@@ -9,6 +9,7 @@ function setLocation(pos) {
     document.getElementById('lat').value=lat;
     document.getElementById('lng').value=lng;
 
+    document.querySelector('.over-wrap-loader').classList.add("hide");
 }
 
 // エラー時に呼び出される関数
@@ -35,7 +36,7 @@ if ("geolocation" in navigator) {
         "timeout": 10000,
         "maximumAge": 0,
     };
-    navigator.geolocation.getCurrentPosition(setLocation, showErr, opt);
+    navigator.geolocation.watchPosition(setLocation, showErr, opt);
 } else {
     alert("ブラウザが位置情報取得に対応していません");
 }

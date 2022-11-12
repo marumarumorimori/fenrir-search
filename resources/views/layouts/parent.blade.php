@@ -24,6 +24,7 @@
 <div class="container">
   <h2>@yield('title')</h2>
   @yield('content')
+
 </div>
 
 </main>

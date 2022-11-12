@@ -1,6 +1,10 @@
 @extends('layouts.parent')
 @section('title', '検索')
 @section('content')
+    <div class=over-wrap-loader>
+        <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+    </div>
+
             <div class="shop-search">
                 <div class="shop-search-img">
                 </div>

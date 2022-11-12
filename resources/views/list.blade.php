@@ -3,7 +3,6 @@
 @section('content')
 <div class="shop-container">
 
-
         @for ($i = 0; $i < $restaurants['results_returned']; $i++)
             <div class="shop">
                     <div class="shop-image">
@@ -24,10 +23,7 @@
         @endfor
             </div>
 
-        <?php $page_num = ceil($restaurants['results_available']/$count);
-  ?>
-
-
+        <?php $page_num = ceil($restaurants['results_available']/$count);?>
         @for ($i = 0; $i < $page_num; $i++)
             <?php $current_page = $count * $i + 1; ?>
             <a href="{{route('search', [ 'range' => $range ,'lat' => $lat,'lng' => $lng,'start' => $current_page])}}"><?php echo $i + 1; ?></a>
