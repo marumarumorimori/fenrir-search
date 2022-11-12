@@ -4,8 +4,8 @@
             <div class="shop-search">
                 <div class="shop-search-img">
                 </div>
-                <form class="shop-search-form" method="POST" action="{{route('search')}}">
-                    @csrf
+                <form class="shop-search-form" method="GET" action="{{route('search')}}">
+
                             <div class="shop-search-form01">
                                 <p class="bold">半径</p>
                                 <select name="range">
@@ -16,8 +16,9 @@
                                     <option value="5">3000m</option>
                                 </select>
                             </div>
-                            <input type="hidden" name="lat" id="lat">
-                            <input type="hidden" name="lng" id="lng">
+                            <input type="text" name="lat" id="lat">
+                            <input type="text" name="lng" id="lng">
+                            <input type="text" name="start" id="start" value="">
                             <div class="search-btn">
                                 <input type="submit" value="検索する">
                             </div>

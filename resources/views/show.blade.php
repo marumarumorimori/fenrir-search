@@ -12,11 +12,7 @@
                         <p class="bold">住所</p>
                         <p>{{{ $restaurant['shop'][0]['address'] }}}</p>
                     </div>
-                    <div>
-                        <p class="bold">営業時間</p>
-                        <p>{{{ $restaurant['shop'][0]['open'] }}}</p>
-                    </div>
-                </div>
+
             </div>
 
             <button type="button" onClick="history.back()">戻る</button>

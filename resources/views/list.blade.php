@@ -2,12 +2,9 @@
 @section('title', '一覧')
 @section('content')
 <div class="shop-container">
-<?php var_dump($restaurants['results_returned']);
-var_dump($restaurants);
-?>
 
 
-        @for ($i = 0; $i < $restaurants['results_returned']; $i++):
+        @for ($i = 0; $i < $restaurants['results_returned']; $i++)
             <div class="shop">
                     <div class="shop-image">
                         <img src="{{{ $restaurants['shop'][$i]['photo']['pc']['l'] }}}" alt="">
@@ -26,5 +23,14 @@ var_dump($restaurants);
                 </div>
         @endfor
             </div>
-        <div class="pagenation">1 2 3</div>
+
+        <?php $page_num = ceil($restaurants['results_available']/$count);
+  ?>
+
+
+        @for ($i = 0; $i < $page_num; $i++)
+            <?php $current_page = $count * $i + 1; ?>
+            <a href="{{route('search', [ 'range' => $range ,'lat' => $lat,'lng' => $lng,'start' => $current_page])}}"><?php echo $i + 1; ?></a>
+        @endfor
+
 @endsection
