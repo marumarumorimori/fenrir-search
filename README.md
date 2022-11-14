@@ -58,12 +58,8 @@ CSS
 - 詳細画面 ：検索結果の飲食店の詳細を表示する。
 
 ## 検索画面
-![画像の説明](public/images/fenrir1.png "hero")
-![画像の説明](public/images/fenrir2.png "hero")
-![画像の説明](public/images/fenrir3.png "hero")
-![画像の説明](public/images/fenrir4.png "hero")
-![画像の説明](public/images/fenrir5.png "hero")
-![画像の説明](public/images/fenrir6.png "hero")
+
+<img src="{public/images/fenrir1.php}" width="50%" />
 
 ### 使用しているAPI,SDK,ライブラリなど
 
