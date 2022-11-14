@@ -1,17 +1,12 @@
-function setLocation(pos) {
 
+function setLocation(pos) {
     // 緯度・経度を取得
     const lat = pos.coords.latitude;
     const lng = pos.coords.longitude;
-    // 定数lat,lng をconsoleに出力
-    console.log(lat);
-    console.log(lng);
     document.getElementById('lat').value=lat;
     document.getElementById('lng').value=lng;
-
     document.querySelector('.over-wrap-loader').classList.add("hide");
 }
-
 // エラー時に呼び出される関数
 function showErr(err) {
     switch (err.code) {
@@ -28,7 +23,6 @@ function showErr(err) {
             alert(err.message);
     }
 }
-
 // geolocation に対応しているか否かを確認
 if ("geolocation" in navigator) {
     var opt = {
