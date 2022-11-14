@@ -9,6 +9,8 @@ class HotpepperController extends Controller
 {
     // HTTPリクエストを送るURL
     private const REQUEST_URL = 'http://webservice.recruit.co.jp/hotpepper/gourmet/v1/';
+     // APIキー
+    private $api_key;
     /**
     * 検索画面のページを返す
     *
@@ -38,9 +40,10 @@ class HotpepperController extends Controller
             $start = 1;
         }
         $client = new Client();
+        $this->api_key = config('hotpepper.api_key');
         $options = [
             'query' => [
-                'key' => '43159554938a8da6',
+                'key' => config('hotpepper.api_key'),
                 'lat' => $lat,
                 'lng' => $lng,
                 'range' => $range,
@@ -65,9 +68,10 @@ class HotpepperController extends Controller
     public function show($id)
     {
         $client = new Client();
+        $this->api_key = config('hotpepper.api_key');
         $options = [
             'query' => [
-                'key' => '43159554938a8da6',
+                'key' => config('hotpepper.api_key'),
                 'id' => $id,
                 'format' => 'json',
             ],
