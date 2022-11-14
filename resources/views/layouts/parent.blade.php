@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,29 +8,25 @@
     <link rel="stylesheet" href="{{ asset('/css/reset.css')  }}">
     <link rel="stylesheet" href="{{ asset('/css/header.css')  }}">
     <link rel="stylesheet" href="{{ asset('/css/footer.css')  }}">
-    <link rel="stylesheet" href="{{ asset('/css/search.css')  }}">
-    <link rel="stylesheet" href="{{ asset('/css/index.css')  }}">
-    <link rel="stylesheet" href="{{ asset('/css/detail.css')  }}">
+    @stack('css')
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
 </head>
 <body>
-    <header>
-        <div class="header-inner">
-            <a href="search.html"><h1 class="header-logo">ロゴ</h1></a>
-            <a href="search.html">！！<i class="fa-regular fa-magnifying-glass"></i></a>
-        </div>
-    </header>
-    <main>
-
-<div class="container">
-  <h2>@yield('title')</h2>
-  @yield('content')
-
-</div>
-
-</main>
-    <footer>
-        <small>aa</small>
-    </footer>
-
+    <div class="bg-img">
+        <header>
+            <div class="header-inner">
+                <a href="{{ route('index') }}"><h1 class="header-logo"><img src="{{ asset('/images/fenrir-title.png')  }}" alt="ハンレス"></h1></a>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <h2>@yield('title')</h2>
+                @yield('content')
+            </div>
+        </main>
+        <footer>
+            <small>@2022 tsuji shina</small>
+        </footer>
+    </div>
 </body>
 </html>
