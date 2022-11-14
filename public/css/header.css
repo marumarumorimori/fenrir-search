@@ -1,20 +1,22 @@
-body {
-    min-height: 100vh;
+/*
+
+    ヘッダーのcss
+
+*/
+.header-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 800px;
+    color: #fff;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10px;
 }
 header {
-    border-bottom: 3px solid #ff8ba7;
-    color: #33272a;
-}
-.header-inner {
-    margin: 0 auto;
-    text-align: center;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-justify-content: space-between;
-    justify-content: space-between;
-    -webkit-align-items: center;
-    align-items: center;
-    height: 50px;
-    max-width: 650px;
-    padding: 20px;
+    padding: 20px 30px;
 }

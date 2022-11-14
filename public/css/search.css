@@ -1,85 +1,102 @@
+/*
 
+    店舗検索画面のcss
+
+*/
 img {
     width: 100%;
     height: auto;
     height: 100%;
 }
-
-main {
-    background-color: #faeee7;
-    padding: 30px 4%;
+.bg-img {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../images/fenrir_bg.png");
+    background-repeat:repeat;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #464646;
 }
-.bold {
-    font-weight: bold;
-    padding-bottom: 15px;
-    font-size: 1.1rem;
-
-}
-.container {
+.shop-search {
+    max-width: 700px;
+    margin: 30px auto 0 auto;
     text-align: center;
-    min-height: 100vh;
 }
-.container h2 {
-    font-size: 1.5rem;
-    border-bottom: 1px solid #000;
-    display: inline-block;
-    padding-bottom: 10px;
-}
-.shop-search-img {
-    margin-top: 30px;
-}
-
-.shop-search-form {
-    background-color: white;
-    margin-top: 50px;
-    text-align: left;
-    padding: 30px;
+.logo-img h1 {
+    font-size: 10rem;
 }
 .shop-search-form01 {
-    /* background-color: aquamarine; */
-    margin-bottom: 60px;
-    padding: 30px;
-    /* border: 1px solid #000; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width:600px ;
+    margin: 0 auto;
+    background-color: antiquewhite;
 }
-.shop-search-form01 select {
-    border: 1px solid #000;
-    padding: 3px;
-    border-radius: 5px;
-}
-.shop-search-form01  input {
-    border: 1px solid #000;
+select, option{
+    border:rgb(255, 255, 255) 2px solid;
     padding: 10px;
+    color: rgb(44, 44, 44);
+    background-color: rgb(255, 255, 255);
+    width: 70%;
 }
 .search-btn {
-    /* background-color: antiquewhite; */
-    text-align: center;
-}
-.search-btn input{
-    background-color: #ff8ba7;
+    width: 30%;
     display: inline-block;
-    padding: 4% 10%;
-    border-radius: 5px;margin:  0 auto ;
-    color: #33272a;
+    padding: 10px;
+    background-color: rgb(255, 244, 162);
+    border:rgb(255, 244, 162) 2px solid;
 }
-.search-btn a {
-    font-weight: bold;
-    font-size: 1.2rem;
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
 }
-
-
-/*
- レスポンシブデザイン900px以下の画面
- */
-@media ( min-width : 850px ){
-    .shop-search-img {
-        max-width: 750px;
-        margin: 30px auto 0px auto;
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
     }
-
-    .shop-search-form {
-        padding: 30px;
-        max-width: 750px;
-        margin:  50px auto 0px auto;
+    100% {
+        transform: rotate(360deg);
     }
-
+}
+.over-wrap-loader {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.596);
+}
+.over-wrap-loader.hide {
+    display: none;
 }
