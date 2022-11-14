@@ -20,7 +20,6 @@ img {
     background-color: #464646;
     color: #fff;
 }
-
 .container {
     text-align: center;
 }
@@ -61,7 +60,6 @@ img {
     font-weight: bold;
     margin-bottom: 15px;
 }
-
 .shop-info {
     text-align: left;
     padding-bottom: 10px;
@@ -83,7 +81,62 @@ img {
     font-weight: bold;
     color: #594a4e;
 }
-
+/* ページネーション */
+.pagination__wrapper {
+    width:100%;
+    margin:auto;
+    width: 360px;
+}
+.pagination {
+    margin:auto;
+    width: 100%;
+    text-align:center;
+}
+.pagination ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+}
+.pagination li {
+    overflow: hidden;
+    flex: 1;
+    margin: 4px;
+}
+.pagination a, .pagination span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin: 0 3px 0 0;
+    border-radius: 50%;
+    text-decoration: none;
+    border:2px solid #fff;
+}
+.pagination a:hover {
+    width: 40px;
+    height: 40px;
+    margin: 0 3px 0 0;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #fff;
+    background:#999;
+    border:2px solid #999;
+}
+.pagination .pagenation-current {
+    color: #fdde6e;
+    cursor: default;
+    margin: 0 3px 0 0;
+    border:2px solid #fdde6e;
+}
+.page-numbers {
+    width: auto;
+    padding: 0;
+    background: transparent
+}
+  /* ページネーションの終わり */
 @media screen and ( max-width:800px )
 {
     .shop-text {
@@ -136,5 +189,13 @@ img {
         border-radius: 6px;
         font-weight: bold;
         color: #594a4e;
+    }
+}
+/* ページネーション */
+@media screen and ( max-width:600px )
+{
+    .pagination a:hover {
+        width: 30px;
+        height: 30px;
     }
 }
