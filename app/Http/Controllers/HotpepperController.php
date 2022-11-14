@@ -7,41 +7,37 @@ use Illuminate\Support\Facades\Http;
 
 class HotpepperController extends Controller
 {
-
     // HTTPリクエストを送るURL
     private const REQUEST_URL = 'http://webservice.recruit.co.jp/hotpepper/gourmet/v1/';
-
-    // APIキー
-    private $api_key;
-
+    /**
+    * 検索画面のページを返す
+    *
+    * @param array なし
+    * @return array なし
+    */
     public function index()
     {
         return view('index');
     }
-
+    /**
+    * 半径から店舗を検索
+    *
+    * @param array $request 検索条件
+    * @return array $restaurants　レストラン
+    */
     public function search(Request $request)
     {
+        $range = $request->input('range'); //フォームからうけとった半径
+        $lat = $request->input('lat'); //緯度
+        $lng = $request->input('lng'); //経度
+        $start = $request->input('start'); //最初に表示する数字
+        $count = 10; // 1ページに表示する数
 
-        $range = $request->input('range');
-        $lat = $request->input('lat');
-        $lng = $request->input('lng');
-        $start = $request->input('start');
-        $count = 10;
-
+        //フォームからvalueを受け取らなかったら、１番目の店舗を表示する
         if (!$request->has('start')) {
             $start = 1;
         }
-
-        // インスタンス生成
         $client = new Client();
-
-        // HTTPリクエストメソッド
-        $method = 'GET';
-
-        // APIキーを取得
-        $this->api_key = config('hotpepper.api_key');
-
-        // APIキーや検索ワードなどの設定を記述
         $options = [
             'query' => [
                 'key' => '43159554938a8da6',
@@ -53,28 +49,22 @@ class HotpepperController extends Controller
                 'format' => 'json',
             ],
         ];
-
-        // $response = Http::get(self::REQUEST_URL,$options);
-
         // HTTPリクエストを送信
         $response = $client->request('GET', self::REQUEST_URL, $options);
-
-        // 'format' => 'json'としたのでJSON形式でデータが返ってくるので、連想配列型のオブジェクトに変換
+        //JSONデコード
         $restaurants = json_decode($response->getBody(), true)['results'];
+        //list画面（店舗一覧画面）に該当する全レストラン,半径、緯度、経度、ページ始め、１ページあたりに表示する件数を返す
         return view('list', compact('restaurants','range','lat','lng','start','count'));
     }
+    /**
+    * 店舗詳細を表示
+    *
+    * @param array $id 店舗ID
+    * @return array $restaurant　該当する店舗
+    */
     public function show($id)
     {
-        // インスタンス生成
         $client = new Client();
-
-        // HTTPリクエストメソッド
-        $method = 'GET';
-
-        // APIキーを取得
-        $this->api_key = config('hotpepper.api_key');
-
-        // APIキーや検索ワードなどの設定を記述
         $options = [
             'query' => [
                 'key' => '43159554938a8da6',
@@ -82,14 +72,11 @@ class HotpepperController extends Controller
                 'format' => 'json',
             ],
         ];
-
         // HTTPリクエストを送信
-        $response = $client->request($method, self::REQUEST_URL, $options);
-
-        // 'format' => 'json'としたのでJSON形式でデータが返ってくるので、連想配列型のオブジェクトに変換
+        $response = $client->request('GET', self::REQUEST_URL, $options);
+        //JSONデコード
         $restaurant = json_decode($response->getBody(), true)['results'];
-
-        // index.blade.phpを表示する
+        //show画面（店舗詳細画面）に該当するレストランを返す
         return view('show', compact('restaurant'));
     }
 }
