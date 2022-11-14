@@ -12,11 +12,11 @@
 
 #### コンセプト
 
-半径選択するだけでレストランを検索できる。
+半径を選択するだけでレストランを検索できる。
 
 #### こだわったポイント
 
-検索条件が半径選択するだけなので、できる限りシンプルなデザインかつ、少し高みえするようなダークめなデザインにしたところ。
+検索条件が半径を選択するだけなので、できる限りシンプルなデザインかつ、少し高みえするようなダークめなデザインにしたところ。
 
 ### 公開したアプリの URL（Store にリリースしている場合）
 
@@ -29,17 +29,17 @@ https://github.com/marumarumorimori/fenrir-search
 ## 開発環境
 ### 開発環境
 
-macOS Monterey 12.4
-Google chrome  107.0.5304.110
-Visual Studio Code 1.73.1
+- macOS Monterey 12.4
+- Google chrome  107.0.5304.110
+- Visual Studio Code 1.73.1
 
 ### 開発言語
 
-Laravel 9.38.0
-PHP 8.0.24
-Javascript 
-HTML
-CSS
+- Laravel 9.38.0
+- PHP 8.0.24
+- Javascript 
+- HTML
+- CSS
 
 
 ## 開発期間
