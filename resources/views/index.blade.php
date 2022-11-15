@@ -12,7 +12,7 @@
         </div>
         <form class="shop-search-form" method="get" action="{{route('search')}}">
             <div class="shop-search-form01">
-                <select name="radius">
+                <select name="range">
                     <option value="" selected disabled>現在地からの半径距離を選択してください</option>
                     <option value="1">300m</option>
                     <option value="2">500m</option>
