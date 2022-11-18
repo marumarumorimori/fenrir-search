@@ -20,7 +20,7 @@
 
 ### 公開したアプリの URL（Store にリリースしている場合）
 
-https://apps.apple.com/jp/app/xxxx
+https://fenrir.shinaportfolio.tk/
 
 ### 該当プロジェクトのリポジトリ URL（GitHub,GitLab など Git ホスティングサービスを利用されている場合）
 
